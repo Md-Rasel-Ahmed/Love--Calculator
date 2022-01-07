@@ -1,0 +1,33 @@
+body {
+  background: #f504ac;
+  color: #fff;
+}
+.container {
+  width: 400px;
+  background: rgb(109, 0, 251);
+  height: 300px;
+  padding: 10px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 10px;
+}
+form {
+  border: 1px solid #fff;
+}
+input {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  display: block;
+  width: 300px;
+  margin: 5px auto;
+}
+#btn {
+  width: 322px;
+  color: #fff;
+  background: #f504ac;
+}
+.resut {
+  text-decoration: underline;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Love Calculator</title>
+</head>
+<body>
+<div class="container">
+     <h5>এইটা রেন্ডমলি চেক করবে আপনাদের ভালোবাসা কত পার্সেন্ট,এইটা সবসময় এক দেখাবেনা JUST FUN!</h5>
+    <input type="text" id="name" placeholder="আপনার নাম লিখুন">
+    <input type="text" id="name1" placeholder="আপনার ভালোবাসার মানুষের নাম লিখুন">
+    <input type="submit" id="btn" value="Submit">
+<h4>চেকিং ভালোবাসা: <span class="resut"></span></h4>
+</div>
+    
+    
+<script>
+   
+    
+    let result=document.querySelector('.resut');
+    let btn=document.querySelector('#btn');
+  btn.addEventListener('click',function(){
+       let name = document.getElementById('name');
+       let name1 = document.getElementById('name1')
+       if (name.value === '') {
+          return alert(' আপনার নাম লিখুন')
+      }
+       if(!isNaN(name.value)){
+           return alert('আপনার নাম ভ্যালিড হয়নাই,আবার চেষ্টা করুন')
+       }
+       if (name1.value === '') {
+          return alert(' তার নাম লিখুন ')
+      }
+      if (!isNaN(name1.value)) {
+          return alert('তার নাম ভ্যালিড হয়নাই,আবার চেষ্টা করুন')
+      }
+      let lovePersent=getRndInteger(60,100)
+      if(lovePersent<80){
+         return  result.textContent = `আপনাদের দুজনের ভালোবাসা ${lovePersent}% আর একটু বাড়ানো দরকার !`
+      }
+      if (lovePersent <95) {
+         return result.textContent = `আপনাদের দুজনের ভালোবাসা ${lovePersent}% ঠিক আছে এইভাবেই চালিয়ে যান !`
+      }
+      if (lovePersent >98) {
+         return result.textContent = `আপনাদের দুজনের ভালোবাসা ${lovePersent}% এত ভালোবাসা কোথায় রাখেন আপনারা !`
+      }
+  })
+
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+</script>
+</body>
+</html>
